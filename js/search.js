@@ -39,6 +39,8 @@ search.addEventListener('blur', (e) => {
 menuItems.forEach(item => {
 
     item.addEventListener('click', (e) => {
+        e.preventDefault();
+        
 
         if (e.target.localName === 'a') {
             searchQuery(e.target.getAttribute('data-search'))
