@@ -44,7 +44,7 @@ menuItems.forEach(item => {
             searchQuery(e.target.getAttribute('data-search'))
         }
 
-        else if (e.target.localName === 'span') {
+        else if (e.target.localName === 'span' || e.target.localName === 'i') {
             searchQuery(e.target.parentElement.getAttribute('data-search'));
         }
     })
