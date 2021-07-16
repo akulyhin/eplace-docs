@@ -1,3 +1,13 @@
+if (window.matchMedia('(max-width: 767px)').matches) {
+    $('.fa-caret-square-left').toggle();
+    $('.fa-caret-square-right').toggle();
+
+    $('.navbar-left li a span').toggle();
+    $('.navbar-left').toggleClass('small');
+    $('.body-pane').toggleClass('small');
+}
+
+
 $('.menu-btn').click(function() {
     $('.fa-caret-square-left').toggle();
     $('.fa-caret-square-right').toggle();

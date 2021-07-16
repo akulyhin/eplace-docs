@@ -57,6 +57,8 @@ header {
     max-width: 120px;
 }
 
+
+
 .search-block {
     margin: 0 auto;
     max-width: 100%;
@@ -186,3 +188,24 @@ header {
   .menu li.active a {
       color: #fff;
   }
+
+
+  @media (max-width: 767px) {
+    .logo {
+        display: none;
+    }
+
+    .search-block {
+        margin: 0 0 0 10px;
+        width: 200px;
+    }
+    #search {
+        width: 150px;
+        transition: all .3s ease;
+    }
+    
+    #search:focus {
+        width: 270px;
+    }
+}
+
