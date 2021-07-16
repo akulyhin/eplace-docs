@@ -23,9 +23,6 @@ search.addEventListener('input', (e) => {
     }
 })
 
-
-
-
 search.addEventListener('focus', (e) => {
     e.target.placeholder = 'Начните вводить, чтобы найти информацию...';
 })
@@ -35,14 +32,11 @@ search.addEventListener('blur', (e) => {
 })
 
 
-
-
 menuItems.forEach(item => {
 
     item.addEventListener('click', (e) => {
         e.preventDefault();
         
-
         if (e.target.localName === 'a') {
             searchQuery(e.target.getAttribute('data-search'));
 
@@ -107,7 +101,6 @@ function setLocation(curLoc){
       return;
     } catch(e) {}
     location.hash = '#' + curLoc;
-    
 }
 
 
@@ -128,7 +121,7 @@ function searchQuery(query) {
     }
 
     else {
-        content.innerHTML = 'Нифига не найдено! Попробуйте сменить запрос!';
+        content.innerHTML = 'Ничего не смогли найти! Попробуйте сменить запрос!';
     }
 }
 
