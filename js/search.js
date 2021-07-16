@@ -46,7 +46,7 @@ menuItems.forEach(item => {
             searchQuery(e.target.getAttribute('data-search'));
 
             if (e.target.getAttribute('data-search')) {
-                setLocation(`?search=${e.target.getAttribute('data-search').replace(/ /g, '_').toLowerCase()}`);
+                setLocation(`?search=${e.target.getAttribute('data-search').replace(/ /g, '_')}`);
                 document.querySelector('h1').textContent = e.target.getAttribute('data-search');
             }
             
@@ -58,9 +58,10 @@ menuItems.forEach(item => {
 
         else if (e.target.localName === 'span' || e.target.localName === 'i') {
             searchQuery(e.target.parentElement.getAttribute('data-search'));
+
             if (e.target.parentElement.getAttribute('data-search')) {
                 document.querySelector('h1').textContent = e.target.parentElement.getAttribute('data-search');
-                setLocation(`?search=${e.target.parentElement.getAttribute('data-search').replace(/ /g, '_').toLowerCase()}`);
+                setLocation(`?search=${e.target.parentElement.getAttribute('data-search').replace(/ /g, '_')}`);
             }
             else {
                 setLocation('/');
@@ -77,14 +78,22 @@ let searchWin = window.location.search;
 
 if (href.indexOf('?search=') != -1) {
     searchWin = searchWin.slice(1).toLowerCase();
-    utmArr = searchWin.split('&');
+    // utmArr = searchWin.split('&');
+    utmArr = [searchWin];
   
-    // перебираем массив и разбиваем каждый элемент по разделителю "=" и записываем в LocalStorage
 
     utmArr.forEach(el => {
         let replaceText = decodeURIComponent(el).replace(/_/g, ' ');
         document.querySelector('h1').textContent = replaceText.replace(/search=/g, ' ');
         searchQuery(replaceText.replace(/search=/g, ' ').replace(' ', ''));
+        menuItems.forEach(item => {
+            item.parentElement.classList.remove('active');
+
+            if (item.getAttribute('data-search') === (replaceText.replace(/search=/g, ' ').replace(' ', ''))) {
+                console.log('test');
+                item.parentElement.classList.add('active');
+            }
+        })
     })
 
   }
