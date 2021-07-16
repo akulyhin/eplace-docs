@@ -16,6 +16,8 @@ search.addEventListener('input', (e) => {
 
     else if (e.target.value === '') {
         content.innerHTML = '';
+        setLocation('/');
+        document.querySelector('h1').textContent = '';
 
         allContent.forEach(item => {
             content.appendChild(item);
