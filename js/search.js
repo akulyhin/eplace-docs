@@ -41,12 +41,10 @@ menuItems.forEach(item => {
     item.addEventListener('click', (e) => {
 
         if (e.target.localName === 'a') {
-            search.value = e.target.getAttribute('data-search');
             searchQuery(e.target.getAttribute('data-search'))
         }
 
         else if (e.target.localName === 'span') {
-            search.value = e.target.parentElement.getAttribute('data-search');
             searchQuery(e.target.parentElement.getAttribute('data-search'));
         }
     })
