@@ -11,6 +11,7 @@ search.addEventListener('input', (e) => {
 
     if (e.target.value.length > 2) {
         searchQuery(e.target.value.toLowerCase());
+        setLocation(`?search=${e.target.value.replace(/ /g, '_')}`);
     }
 
     else if (e.target.value === '') {
