@@ -55,6 +55,14 @@
       <input type="search" class="form-control" name="search" id="search" placeholder="Поиск">
     </div>
 
+    <ul class="right-btn">
+      <li data-toggle="tooltip" data-placement="bottom" data-title="Служба поддержки">
+        <button type="button" class="support-button" data-toggle="modal" data-target="#supportModal">
+          <i class="fas fa-headset"></i>
+        </button>
+      </li>
+    </ul>
+
   </div>
 </header>
 
@@ -138,6 +146,32 @@
 </div>
 
 
+
+<!-- Модальное окно -->
+<div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body messenger-block">
+          <h2 class="title_h2">Выберите свой мессенджер</h2>
+              <ul class="messenger_list">
+                  <li class="messenger_item"><a href="https://t.me/eplaceUA_bot" class="messenger_link telegram btn btn-primary" target="_blank">
+                      <i class="fab fa-telegram-plane"></i> Telegram</a>
+                  </li>
+
+                  <li class="messenger_item"><a href="viber://pa?chatURI=eplace" class="messenger_link viber btn btn-primary" target="_blank">
+                      <i class="fab fa-viber"></i> Viber</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 </main>

@@ -210,6 +210,12 @@ header {
     }
 }
 
+.title_h2 {
+    color: #000;
+    font-weight: 900;
+    font-size: 1.8em;
+}
+
 .tags {
     padding: 5px;
     margin-bottom: 20px;
@@ -231,4 +237,161 @@ header {
 
 .content-box iframe {
     margin-top: 20px;
+}
+
+.right-btn {
+    padding: 0;
+    margin: 0;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.right-btn li {
+    list-style-type: none;
+    color: #8c97a3;
+}
+
+.right-btn:last-child {
+    border-right: 1px solid #777;
+}
+
+.right-btn li:hover {
+    background-color: #1d303c;
+}
+
+.support-button {
+    border: 0;
+    background-color: transparent;
+    color: #8c97a3;
+    padding: 10px 15px;
+}
+
+
+.support-button i {
+    font-size: 21px;
+    animation: icon-rotation-anim 10s infinite ease-in-out;
+}
+
+
+.messenger_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 0;
+}
+
+.messenger_item {
+    list-style-type: none;
+}
+
+.telegram {
+    background-color: #039be5;
+    margin-right: 20px;
+}
+
+.messenger_link {
+    width: 120px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 18px;
+    padding: 12px 8px;
+    display: inline-block;
+    transition: all .2s linear;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.viber {
+    background-color: #675da9;
+}
+
+
+.email i {
+    animation: icon-rotation-anim 10s infinite ease-in-out;
+}
+
+@keyframes icon-rotation-anim {
+    0% {
+        transform: rotate(0);
+    }
+    18% {
+        transform: rotate(0);
+    }
+    20% {
+        transform: rotate(45deg);
+    }
+    22% {
+        transform: rotate(-45deg);
+    }
+    24% {
+        transform: rotate(45deg);
+    }
+
+    26% {
+        transform: rotate(0);
+    }
+
+    51% {
+        transform: scale(1);
+    }
+
+    52% {
+        transform: scale(1.3);
+    }
+
+    53% {
+        transform: scale(0.8);
+    }
+
+    54% {
+        transform: scale(1.3);
+    }
+
+    55% {
+        transform: scale(1);
+    }
+
+    58% {
+        transform: scale(1.3);
+    }
+
+    59% {
+        transform: scale(0.8);
+    }
+
+    60% {
+        transform: scale(1.3);
+    }
+
+    61% {
+        transform: scale(1);
+    }
+
+    78% {
+        transform: rotate(0);
+    }
+    80% {
+        transform: rotate(45deg);
+    }
+    82% {
+        transform: rotate(-45deg)
+    }
+
+    84% {
+        transform: rotate(45deg);
+    }
+
+    86% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
 }
