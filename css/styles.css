@@ -136,11 +136,12 @@ header {
   }
   
   .content-box {
-    padding: 30px 10px;
-    border-radius: 8px;
+    padding: 30px 15px;
+    border-radius: 5px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .15);
-    transition: all .3s ease;
+    transition: all .3s linear;
     margin-bottom: 25px;
+    min-height: 500px;
   }
   
   .content-box:hover {
@@ -209,3 +210,25 @@ header {
     }
 }
 
+.tags {
+    padding: 5px;
+    margin-bottom: 20px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.tags.active {
+    background: #dbceab;
+}
+
+.tags.active::before {
+    content: '#';
+}
+
+.content-box iframe {
+    margin-top: 20px;
+}

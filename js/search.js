@@ -3,6 +3,18 @@ const content = document.querySelector('.content');
 const contentBox = document.querySelectorAll('.content .content-item');
 const allContent = document.querySelectorAll('.content .content-item');
 const menuItems = document.querySelectorAll('.menu a');
+const tags = document.querySelectorAll('.tags');
+
+tags.forEach(item => {
+    if (item.textContent) {
+        item.classList.add('active');
+
+        item.addEventListener('click', (e) => {
+            searchQuery(e.target.textContent.toLowerCase());
+            setLocation(`?search=${e.target.textContent.replace(/ /g, '_')}`);
+        })
+    }
+})
 
 let contentArr = [];
 
