@@ -37,7 +37,7 @@ header {
     color: #ffffff;
     height: 50px;
     left: 0;
-    min-width: 1200px;
+    min-width: 100%;
     position: fixed;
     right: 0;
     top: 0;
@@ -50,6 +50,8 @@ header {
     display: flex;
     align-items: center;
     width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
 }
 
 .logo {
@@ -68,6 +70,8 @@ header {
 #search {
     width: 200px;
     transition: all .3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 #search:focus {
