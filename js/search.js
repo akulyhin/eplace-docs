@@ -103,7 +103,6 @@ if (href.indexOf('?search=') != -1) {
             item.parentElement.classList.remove('active');
 
             if (item.getAttribute('data-search') === (replaceText.replace(/search=/g, ' ').replace(' ', ''))) {
-                console.log('test');
                 item.parentElement.classList.add('active');
             }
         })
@@ -122,13 +121,20 @@ function setLocation(curLoc){
 }
 
 
+
+
 function searchQuery(query) {
     contentArr = [];
 
+    
+
     contentBox.forEach(item => {
-        if (item.children[0].children[0].innerText.toLowerCase().indexOf(query.toLowerCase()) !== -1 || item.children[0].children[1].innerText.toLowerCase().indexOf(query.toLowerCase()) !== -1) {
+
+        for (let i = 1; i < item.children[0].children.length; i++) {
+            if (item.children[0].children[i].innerText.toLowerCase().indexOf(query.toLowerCase()) !== -1 ) {
             contentArr.push(item);
         }
+    }
     })
 
     if (contentArr[0]) {
