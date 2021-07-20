@@ -12,6 +12,10 @@ tags.forEach(item => {
         item.addEventListener('click', (e) => {
             searchQuery(e.target.textContent.toLowerCase());
             setLocation(`?search=${e.target.textContent.replace(/ /g, '_')}`);
+
+            menuItems.forEach(el => {
+                el.parentElement.classList.remove('active');
+            })
         })
     }
 })
