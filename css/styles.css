@@ -249,7 +249,7 @@ header {
 
 .right-btn li {
     list-style-type: none;
-    color: #8c97a3;
+    color: #fff;
 }
 
 .right-btn:last-child {
@@ -263,7 +263,7 @@ header {
 .support-button {
     border: 0;
     background-color: transparent;
-    color: #8c97a3;
+    color: #fff;
     padding: 10px 15px;
 }
 
