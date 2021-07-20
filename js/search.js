@@ -130,7 +130,7 @@ function searchQuery(query) {
 
     contentBox.forEach(item => {
 
-        for (let i = 1; i < item.children[0].children.length; i++) {
+        for (let i = 0; i < item.children[0].children.length; i++) {
             if (item.children[0].children[i].innerText.toLowerCase().indexOf(query.toLowerCase()) !== -1 ) {
             contentArr.push(item);
         }
