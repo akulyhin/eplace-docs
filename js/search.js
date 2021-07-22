@@ -126,8 +126,6 @@ function setLocation(curLoc){
 function searchQuery(query) {
     contentArr = [];
 
-    
-
     contentBox.forEach(item => {
 
         for (let i = 0; i < item.children[0].children.length; i++) {
