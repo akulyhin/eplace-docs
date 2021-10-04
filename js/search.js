@@ -91,7 +91,6 @@ let searchWin = window.location.search;
 
 if (href.indexOf('?search=') != -1) {
     searchWin = searchWin.slice(1).toLowerCase();
-    // utmArr = searchWin.split('&');
     let utmArr = [searchWin];
   
 
@@ -127,7 +126,6 @@ function searchQuery(query) {
     contentArr = [];
 
     contentBox.forEach(item => {
-
         for (let i = 0; i < item.children[0].children.length; i++) {
             if (item.children[0].children[i].innerText.toLowerCase().indexOf(query.toLowerCase()) !== -1 ) {
             contentArr.push(item);
