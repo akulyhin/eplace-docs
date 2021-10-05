@@ -13,7 +13,6 @@ $('.menu-btn').click(function() {
     $('.fa-caret-square-right').toggle();
 
     $('.navbar-left li a span').toggle();
-    $('.navbar-left li a span').toggleClass('open');
     $('.navbar-left').toggleClass('small');
     $('.body-pane').toggleClass('small');
 
@@ -31,14 +30,10 @@ if (localStorage.getItem('menu')) {
     $('.fa-caret-square-right').toggle();
 
     $('.navbar-left li a span').toggle();
-    $('.navbar-left li a span').addClass('open');
     $('.navbar-left').toggleClass('small');
     $('.body-pane').toggleClass('small');
 }
 
-else {
-    $('.navbar-left li a span').removeClass('open');
-}
 
 
 $('.menu li').click(function() {

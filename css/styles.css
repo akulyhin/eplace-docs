@@ -127,12 +127,6 @@ header {
     margin-left: 5px;
     vertical-align: middle;
     transition: all .4s ease;
-    opacity: 0;
-}
-
-
-.navbar-left li span.open {
-    opacity: 1;
 }
 
 .menu-btn {
